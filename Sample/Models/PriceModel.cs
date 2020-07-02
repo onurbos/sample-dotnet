@@ -4,7 +4,7 @@ namespace Sample.Models
 {
     public class PriceModel
     {
-      
+
         [JsonProperty("price")]
         public double Price { get; set; }
 
