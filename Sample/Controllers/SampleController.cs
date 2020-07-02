@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
@@ -32,7 +32,7 @@ namespace Sample.Controllers
 
             return Ok(userList);
         }
-        
+
         /// <summary>
         /// Get Users
         /// </summary>  
@@ -52,6 +52,6 @@ namespace Sample.Controllers
 
             return Ok(price);
         }
-        
+
     }
 }
