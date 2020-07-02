@@ -32,5 +32,26 @@ namespace Sample.Controllers
 
             return Ok(userList);
         }
+        
+        /// <summary>
+        /// Get Users
+        /// </summary>  
+        ///<response code="200">Successful operation</response>
+        ///<response code="400">Invalid request</response>
+        ///<returns>List of Users</returns>
+        [HttpPost, Route("get_price")]
+        [ProducesResponseType(typeof(PriceModel), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public IActionResult GetPrice([FromBody]PriceModel price)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+
+            price.Price = 10.8;
+
+            return Ok(price);
+        }
+        
     }
 }
