@@ -18,39 +18,39 @@ namespace Sample.Controllers
         {
             var requestHeader = context.HttpContext.Request.Headers;
 
-            if (!requestHeader.TryGetValue("Authorization", out var authorization))
-            {
-                context.Result = new UnauthorizedObjectResult(null);
-                return;
-            }
+            //if (!requestHeader.TryGetValue("Authorization", out var authorization))
+            //{
+            //    context.Result = new UnauthorizedObjectResult(null);
+            //    return;
+            //}
 
-            if (!requestHeader.TryGetValue("X-App-Id", out var xAppId))
-            {
-                context.Result = new BadRequestObjectResult("X-App-Id cannot be null.");
-                return;
-            }
+            //if (!requestHeader.TryGetValue("X-App-Id", out var xAppId))
+            //{
+            //    context.Result = new BadRequestObjectResult("X-App-Id cannot be null.");
+            //    return;
+            //}
 
-            if (!requestHeader.TryGetValue("X-Tenant-Id", out var xTenantId))
-            {
-                context.Result = new BadRequestObjectResult("X-Tenant-Id cannot be null.");
-                return;
-            }
+            //if (!requestHeader.TryGetValue("X-Tenant-Id", out var xTenantId))
+            //{
+            //    context.Result = new BadRequestObjectResult("X-Tenant-Id cannot be null.");
+            //    return;
+            //}
 
-            if (!int.TryParse(xAppId, out var appId))
-            {
-                context.Result = new BadRequestObjectResult("X-App-Id must be a number.");
-                return;
-            }
+            //if (!int.TryParse(xAppId, out var appId))
+            //{
+            //    context.Result = new BadRequestObjectResult("X-App-Id must be a number.");
+            //    return;
+            //}
 
-            if (!int.TryParse(xTenantId, out var tenantId))
-            {
-                context.Result = new BadRequestObjectResult("X-Tenant-Id must be a number.");
-                return;
-            }
+            //if (!int.TryParse(xTenantId, out var tenantId))
+            //{
+            //    context.Result = new BadRequestObjectResult("X-Tenant-Id must be a number.");
+            //    return;
+            //}
 
-            Authorization = authorization;
-            AppId = appId;
-            TenantId = tenantId;
+            //Authorization = authorization;
+            //AppId = appId;
+            //TenantId = tenantId;
         }
 
         private PrimeApps GetPrimeAppsClient()
